@@ -4,6 +4,7 @@
 This is an extremely simple plugin that reads from a .txt file and will dynamically add commands to chat that will print
 links to clients.
 
-#
-This version was developed specifically for WiT Gaming servers but can be adjusted for for general-use purposes or customized for 
-your own brand. If so contact with by pull request or email.
+## WiT Gaming Version
+This means that the plugin has WiT branding and WiT specific features included. It works the same but may have unwanted
+features for general-use. If you would like your own brand included in the  plugin, contact me via pull request or 
+by email: bazookaforreal@gmail.com.
