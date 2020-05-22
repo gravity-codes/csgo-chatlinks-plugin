@@ -1,16 +1,14 @@
 //This is where links for the wit_chat_links plugin will be stored
 //Only lines with "//" at the start will be ignored. Do not use comments unless necessary
 //Try to make commands unique if they are common words, to risk collision with other commands
+//The '!' is handled internally, do not put '!' before commands
 //Usage: the plugin recognizes the "tab" character as delimiter. DO NOT FORGET TAB
 
-//Format: "command name" *tab* "html link" *tab* "description"
-
-//This an example 
-"example"	"someexample.com"	"This is an example."
+//Format: "command name" *tab* "html link"
 
 //Start below this line, with new links going below the last
 
-"group"	"https://steamcommunity.com/groups/teamwitofficial"	"Steam Group Page"
-"steam"	"https://steamcommunity.com/groups/teamwitofficial"	"Steam Group Page"
-"vip"	"https://www.teamwit.org/shop"	"VIP Page"
-"hlstats"	"http://witretake1.hlstatsx.nfoservers.com/hlstats.php"	"US HL Stats Page"	
+"group"	"https://steamcommunity.com/groups/teamwitofficial"
+"steam"	"https://steamcommunity.com/groups/teamwitofficial"
+"vip"	"https://www.teamwit.org/shop"
+"hlstats"	"http://witretake1.hlstatsx.nfoservers.com/hlstats.php"
