@@ -12,7 +12,9 @@ by email: bazookaforreal@gmail.com.
 ## Compiling
 Directories
 wit_chat_links.smx - SourceMod\addons\sourcemod\plugins (after compiling)
+
 wit_chat_links.sp - SourceMod\addons\sourcemod\scripting
+
 wit_links.txt - SourceMod\addons\sourcemod\configs
 
 With the files in the right directories, and with Multicolors(https://github.com/Bara/Multi-Colors) installed, compiles 
