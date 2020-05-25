@@ -2,7 +2,7 @@
 ![Github All Releases](https://img.shields.io/github/downloads/bazooka-codes/csgo-chatlinks-plugin/total)
 
 This is an extremely simple plugin that reads from a .txt file and will dynamically add commands to chat that will print
-links to clients.
+links to clients in chat and in console.
 
 ## WiT Gaming Version
 This means that the plugin has WiT branding and WiT specific features included. It works the same but may have unwanted
