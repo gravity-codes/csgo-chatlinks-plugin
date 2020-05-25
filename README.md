@@ -10,7 +10,8 @@ features for general-use. If you would like your own brand included in the  plug
 by email: bazookaforreal@gmail.com.
 
 ## Compiling
-Directories
+Directories:
+
 wit_chat_links.smx - SourceMod\addons\sourcemod\plugins (after compiling)
 
 wit_chat_links.sp - SourceMod\addons\sourcemod\scripting
