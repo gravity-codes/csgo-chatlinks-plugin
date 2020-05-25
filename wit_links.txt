@@ -8,7 +8,8 @@
 
 //Start below this line, with new links going below the last
 
-"group"	"https://steamcommunity.com/groups/teamwitofficial"
-"steam"	"https://steamcommunity.com/groups/teamwitofficial"
-"vip"	"https://www.teamwit.org/shop"
-"hlstats"	"http://witretake1.hlstatsx.nfoservers.com/hlstats.php"
+"steamgroup"	"https://steamcommunity.com/groups/teamwitofficial"
+"discord"	"https://discordapp.com/invite/xfrZukX"
+"vip"	"http://teamwit.site.nfoservers.com/vip/store.php?page=global"
+"us_hlstats"	"http://witretake1.hlstatsx.nfoservers.com/hlstats.php"
+"eu_hlstats"	"http://euwitretake1.hlstatsx.nfoservers.com/hlstats.php"
