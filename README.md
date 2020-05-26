@@ -8,7 +8,7 @@ select links that will print in chat. These links and menu items are defined in 
 ## Usage
 All files are in their proper directories. The only thing you need to do is move them onto your server version. In terms
 of adding links, do not modify the plugin code. You only need to add your links (in the proper format) to the 
-configs/chat_links.txt folder. The plugin will automatically refresh the links on map change.
+configs/chat_links.txt file. The plugin will automatically refresh the links on map change.
 
 ## WiT Gaming Version
 This means that the plugin has WiT branding and WiT specific features included. It works the same but may have unwanted
