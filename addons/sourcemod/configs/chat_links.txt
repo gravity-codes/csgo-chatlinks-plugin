@@ -1,4 +1,4 @@
-//This is where links for the wit_chat_links plugin will be stored
+//This is where links for the chat_links.sp plugin will be stored
 //Only lines with "//" at the start will be ignored. Do not use comments unless necessary
 //Try to make commands unique if they are common words, to risk collision with other commands
 //The '!' is handled internally, do not put '!' before commands
@@ -7,9 +7,4 @@
 //Format: "command name" *tab* "html link"
 
 //Start below this line, with new links going below the last
-
-"steamgroup"	"https://steamcommunity.com/groups/teamwitofficial"
-"discord"	"https://discordapp.com/invite/xfrZukX"
-"vip"	"http://teamwit.site.nfoservers.com/vip/store.php?page=global"
-"us_hlstats"	"http://witretake1.hlstatsx.nfoservers.com/hlstats.php"
-"eu_hlstats"	"http://euwitretake1.hlstatsx.nfoservers.com/hlstats.php"
+"placeholder"  "removethisentry.com"

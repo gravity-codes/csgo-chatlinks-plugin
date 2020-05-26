@@ -1,22 +1,24 @@
 /*
-   - v2.0.1 Now shows menu on !links and each individual link is a command
+   - v2.0.2 Fully tested and working general use version
+
+   - USAGE: Add links to chat_links.txt in configs and thats it. No need to refresh plugin
 */
 
 #include <sourcemod>
 #include <multicolors>
 
-#define VERSION "2.0.1"
+#define VERSION "2.1.0"
 #pragma newdecls required
 
 Handle Cvar_Links = INVALID_HANDLE;
-char filepath[] = {"configs/wit_links.txt"};
+char filepath[] = {"configs/chat_links.txt"};
 Menu linksMenu;
 Handle file;
 
 public Plugin myinfo =
 {
-   name = "[WiT] Gaming Chat Links Plugin",
-   description = "Plugin that dynamically adds chat commands to print links to clients about relevant [WiT] Gaming information.",
+   name = "Bazooka's Chat Links Plugin",
+   description = "Plugin that dynamically adds provided links for users to access in game via !links or each individual link's command.",
    author = "bazooka",
    version = VERSION,
    url= "https://github.com/bazooka-codes"
@@ -24,11 +26,9 @@ public Plugin myinfo =
 
 public void OnPluginStart()
 {
-   CreateConVar("sm_wit_links_version", VERSION, "Current build of WiT Chat links Plugin.");
-   Cvar_Links = CreateConVar("sm_wit_links_enable", "1", "1 - Links plugin enabled | 0 - Links plugin disabled");
+   CreateConVar("sm_chat_links_version", VERSION, "Current build of Chat links Plugin.");
+   Cvar_Links = CreateConVar("sm_chat_links_enable", "1", "1 - Links plugin enabled | 0 - Links plugin disabled");
    RegConsoleCmd("sm_links", ShowLinkMenu);
-   RegConsoleCmd("sm_group", PrintGroupLink);
-   RegConsoleCmd("sm_steam", PrintGroupLink);
 
    //Timer repeats every 7 minutes
    CreateTimer(420.0, NotifyTimer, _, TIMER_REPEAT);
@@ -55,7 +55,7 @@ public Action NotifyTimer(Handle timer)
    }
 
    //Advertise clients can !links
-   CPrintToChatAll("{olive}Want to get in touch? {orange}Want more info? {orchid}Type {darkblue}\"!links\" {lightred}in chat to see a menu of relevant links for {lime}[WiT]!");
+   CPrintToChatAll("{olive}Want to get in touch? {orange}Want more info? {orchid}Type {darkblue}\"!links\" {lightred}in chat to see a menu of relevant links!");
 
    return Plugin_Continue;
 }
@@ -184,8 +184,8 @@ public void GetLinkFromFile(bool mode, int client, char[] cmd, int lineNum)
 
             //Current line matches lineNum or given command argument
             //Print the link in the client's console and chat
-            CPrintToChat(client, "{orchid}[WiT] Gaming Links: {default}%s - {darkblue}Copy and paste link into a browser.", link);
-            PrintToConsole(client, "[WiT] Gaming Links: %s - Copy and paste link into a browser.", link);
+            CPrintToChat(client, "{orchid}Chat Links: {default}%s - {darkblue}Copy and paste link into a browser.", link);
+            PrintToConsole(client, "Chat Links: %s - Copy and paste link into a browser.", link);
          }
       }
       counter++
@@ -204,17 +204,17 @@ public bool verifyFilePath()
 
       if(file != null)
       {
-         PrintToServer("[WiT] Gaming Links: File successfully located.");
+         PrintToServer("[Chat Links]: File successfully located.");
          return true;
       }
       else
       {
-         PrintToServer("[WiT] Gaming Links: ERROR - File could not be opened.");
+         PrintToServer("[Chat Links]: ERROR - File could not be opened.");
       }
    }
    else
    {
-      PrintToServer("[WiT] Gaming Links: ERROR - Unable to find .txt file at path: %s.", filepath);
+      PrintToServer("[Chat Links]: ERROR - Unable to find .txt file at path: %s.", filepath);
    }
 
    return false;
@@ -229,11 +229,4 @@ public void resetSeek()
 
    //Set the file reader back to the start
    FileSeek(file, 0, SEEK_SET);
-}
-
-public Action PrintGroupLink(int client, int args)
-{
-   CReplyToCommand(client, "{orchid}[WiT] Gaming Links: {default}https://steamcommunity.com/groups/teamwitofficial - {darkblue}Copy and paste link into a browser.");
-   PrintToConsole(client, "[WiT] Gaming Links: https://steamcommunity.com/groups/teamwitofficial - Copy and paste link into a browser.");
-   return Plugin_Handled;
 }
