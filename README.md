@@ -1,5 +1,5 @@
 # A Chat-Links Plugin for CS:GO
-![Github All Releases](https://img.shields.io/github/downloads/bazooka-codes/csgo-chatlinks-plugin/total)
+![GitHub](https://img.shields.io/github/license/bazooka-codes/csgo-chatlinks-plugin) ![Github All Releases](https://img.shields.io/github/downloads/bazooka-codes/csgo-chatlinks-plugin/total) 
 
 This is an extremely simple plugin that reads from a .txt file and will dynamically add commands to chat that will print
 links to clients in chat and in console. Clients can type !links in in-game chat and the plugin will provide a menu to 
