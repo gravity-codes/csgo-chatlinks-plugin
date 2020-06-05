@@ -10,7 +10,7 @@
 #define VERSION "2.1.0"
 #pragma newdecls required
 
-Handle Cvar_Links = INVALID_HANDLE;
+ConVar Cvar_Links;
 char filepath[] = {"configs/chat_links.txt"};
 Menu linksMenu;
 Handle file;
@@ -49,7 +49,7 @@ public void OnMapStart()
 
 public Action NotifyTimer(Handle timer)
 {
-   if(file == null || GetConVarInt(Cvar_Links) != 1)
+   if(file == null || Cvar_Links.IntValue != 1)
    {
       return Plugin_Stop;
    }
@@ -62,7 +62,7 @@ public Action NotifyTimer(Handle timer)
 
 public Action ShowLinkMenu(int client, int args)
 {
-   if(file == null || GetConVarInt(Cvar_Links) != 1)
+   if(file == null || Cvar_Links.IntValue != 1)
    {
       return Plugin_Stop;
    }
@@ -75,7 +75,7 @@ public Action ShowLinkMenu(int client, int args)
 
 public int LinkMenuHandler(Menu menu, MenuAction action, int param1, int param2)
 {
-   if(file == null || GetConVarInt(Cvar_Links) != 1)
+   if(file == null || Cvar_Links.IntValue != 1)
    {
       return 0;
    }
@@ -99,7 +99,7 @@ public int LinkMenuHandler(Menu menu, MenuAction action, int param1, int param2)
 
 public Action LinkCommandHandler(int client, int args)
 {
-   if(file == null || GetConVarInt(Cvar_Links) != 1)
+   if(file == null || Cvar_Links.IntValue != 1)
    {
       return Plugin_Stop;
    }
